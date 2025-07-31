@@ -11,17 +11,17 @@ They improve visual smoothness, reduce latency, and enhance DPI scaling.
 ```
 "MaxQueuedBuffers"=dword:00000003
 ```
-Allows up to 3 buffered frames – ensures **smoother rendering** on high-refresh displays (60 Hz → 90 Hz+).  
+Allows up to 3 buffered frames - ensures **smoother rendering** on high-refresh displays (60 Hz → 90 Hz+).  
 ✅ Especially helpful on devices with fast OLED panels and touch UI.
 
 ```
 "UseDpiScaling"=dword:00000001
 ```
-Enables DPI-aware scaling in DWM – provides **sharper visuals and better layout** on high-DPI screens.
+Enables DPI-aware scaling in DWM - provides **sharper visuals and better layout** on high-DPI screens.
 
 ```
 "EnableAeroPeek"=dword:00000000
 ```
-Disables Aero Peek – minor visual effect that can **slightly improve responsiveness**.
+Disables Aero Peek - minor visual effect that can **slightly improve responsiveness**.
 
 ---
