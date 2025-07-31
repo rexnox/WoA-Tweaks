@@ -1,3 +1,5 @@
+📁 Cache & Kernel Tuning
+
 Windows Registry Editor Version 5.00
 
 ; === Cache & Kernel Tuning ===
@@ -10,17 +12,29 @@ Windows Registry Editor Version 5.00
 "ClearPageFileAtShutdown"=dword:00000000
 "NonPagedPoolQuota"=dword:00000000
 ```
+
+
+⏱ Scheduler-Boost
+
 ; === PerformanceScheduler ===
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
 ```
 "Win32PrioritySeparation"=dword:00000026
 ```
+
+
+💾 NTFS SSD Optimierung
+
 ; === NTFS Tuning (SSD-optimiert) ===
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
 ```
 "NtfsDisableLastAccessUpdate"=dword:00000001
 "NtfsMemoryUsage"=dword:00000002
 ```
+
+
+🌐 Netzwerk-Stack Tuning
+
 ; === Netzwerk-Stack Optimierung (RNDIS & USB-C-Ethernet) ===
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
 ```
@@ -31,12 +45,20 @@ Windows Registry Editor Version 5.00
 "EnablePMTUDiscovery"=dword:00000001
 "EnableTCPA"=dword:00000000
 ```
+
+
+🖼 Desktop / UI Performance
+
 ; === DWM (Desktop Window Manager) – Framebuffer optimieren ===
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
 ```
 "MaxQueuedBuffers"=dword:00000002
 "EnableAeroPeek"=dword:00000000
 ```
+
+
+🗂 Explorer Reaktions-Boost
+
 ; === Explorer-Optimierung (Dateizugriffe schneller) ===
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ```
@@ -46,6 +68,9 @@ Windows Registry Editor Version 5.00
 "ListviewAlphaSelect"=dword:00000000
 "ListviewShadow"=dword:00000000
 ```
+
+🛑 Unnötige Dienste abschalten
+
 ; === Dienste-Bremser abstellen ===
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
 ```
@@ -55,4 +80,13 @@ Windows Registry Editor Version 5.00
 ```
 "Start"=dword:00000004
 ```
-``````
+
+🧠 Hinweis für GitHub-Nutzer
+Diese .reg-Werte kannst du in eine Textdatei kopieren und mit .reg-Endung speichern.
+
+Ausführen per Doppelklick oder reg import.
+
+Backup deiner Registry empfohlen!
+
+Ein Reboot ist nach der Anwendung notwendig, um Effekte zu sehen.
+
