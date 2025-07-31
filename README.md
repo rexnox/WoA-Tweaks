@@ -3,6 +3,7 @@
 Windows Registry Editor Version 5.00
 
 ; === Cache & Kernel Tuning ===
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
 ```
 "SecondLevelDataCache"=dword:00001C00
@@ -14,18 +15,22 @@ Windows Registry Editor Version 5.00
 ```
 
 
+
 ⏱ Scheduler-Boost
 
 ; === PerformanceScheduler ===
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
 ```
 "Win32PrioritySeparation"=dword:00000026
 ```
 
 
+
 💾 NTFS SSD Optimierung
 
 ; === NTFS Tuning (SSD-optimiert) ===
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
 ```
 "NtfsDisableLastAccessUpdate"=dword:00000001
@@ -33,9 +38,11 @@ Windows Registry Editor Version 5.00
 ```
 
 
+
 🌐 Netzwerk-Stack Tuning
 
 ; === Netzwerk-Stack Optimierung (RNDIS & USB-C-Ethernet) ===
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
 ```
 "TcpTimedWaitDelay"=dword:0000001E
@@ -47,9 +54,11 @@ Windows Registry Editor Version 5.00
 ```
 
 
+
 🖼 Desktop / UI Performance
 
 ; === DWM (Desktop Window Manager) – Framebuffer optimieren ===
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
 ```
 "MaxQueuedBuffers"=dword:00000002
@@ -57,9 +66,11 @@ Windows Registry Editor Version 5.00
 ```
 
 
+
 🗂 Explorer Reaktions-Boost
 
 ; === Explorer-Optimierung (Dateizugriffe schneller) ===
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ```
 "DisableThumbnailCache"=dword:00000001
@@ -69,9 +80,12 @@ Windows Registry Editor Version 5.00
 "ListviewShadow"=dword:00000000
 ```
 
+
+
 🛑 Unnötige Dienste abschalten
 
 ; === Dienste-Bremser abstellen ===
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
 ```
 "Start"=dword:00000004
@@ -80,6 +94,7 @@ Windows Registry Editor Version 5.00
 ```
 "Start"=dword:00000004
 ```
+
 
 🧠 Hinweis für GitHub-Nutzer
 Diese .reg-Werte kannst du in eine Textdatei kopieren und mit .reg-Endung speichern.
