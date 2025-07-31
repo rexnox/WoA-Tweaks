@@ -8,7 +8,8 @@ The goal: **more direct memory access, lower overhead, faster response times.**
 ## 📁 Cache & Kernel Tuning
 
 **Registry Base:**
-[`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management`]
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management`
 
 `"SecondLevelDataCache"=dword:00001C00`  
 Manually sets the L2 cache size to **1.8 MB** (1C00h = 7168 KB). Often ignored on modern CPUs, but useful on older or exotic systems (e.g. Snapdragon SoCs) where Windows may not detect it correctly.
@@ -33,7 +34,7 @@ Allows Windows to auto-manage the NonPaged Pool – safe and recommended setting
 ## ⏱ Performance Scheduler
 
 **Registry Base:**  
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl`
 
 `"Win32PrioritySeparation"=dword:00000026`  
 Adjusts scheduling balance between UI responsiveness and background processing.  
@@ -44,7 +45,7 @@ Adjusts scheduling balance between UI responsiveness and background processing.
 ## 💾 NTFS Tuning (SSD-Optimized)
 
 **Registry Base:**  
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`
 
 `"NtfsDisableLastAccessUpdate"=dword:00000001`  
 Disables updating of "last accessed" timestamps – reduces write cycles, prolongs SSD lifespan.
@@ -57,7 +58,7 @@ Increases the memory usage for NTFS caching – can improve file access speed on
 ## 🌐 Network Stack Tweaks (USB Ethernet & RNDIS)
 
 **Registry Base:**  
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
 `"TcpTimedWaitDelay"=dword:0000001E`  
 Reduces TIME_WAIT duration for closed TCP connections to 30 seconds – helpful for fast reconnects or limited port availability.
@@ -82,7 +83,7 @@ Disables TCP auto-tuning – helps with stability on flaky USB adapters or limit
 ## 🖼 DWM (Desktop Window Manager) UI Tweaks
 
 **Registry Base:**  
-`[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]`
+`HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM`
 
 `"MaxQueuedBuffers"=dword:00000002`  
 Limits buffered frames to 2 – reduces input latency, useful on low-FPS systems or touch interfaces.
@@ -95,7 +96,7 @@ Disables Aero Peek – a visual effect that can be safely turned off for better 
 ## 🗂 Explorer UI Performance
 
 **Registry Base:**  
-`[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]`
+`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 
 `"DisableThumbnailCache"=dword:00000001`  
 Disables caching of image thumbnails – speeds up file browsing and reduces SSD wear.
@@ -117,13 +118,13 @@ Removes drop shadows from selected items – minor improvement, but visually cle
 ## 🛑 Disable Unnecessary Services
 
 **Registry Base:**  
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain`
 
 `"Start"=dword:00000004`  
 Disables **Superfetch/SysMain** – unnecessary on SSDs and can cause CPU usage spikes.
 
 **Registry Base:**  
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack`
 
 `"Start"=dword:00000004`  
 Disables **Connected User Experiences and Telemetry (DiagTrack)** – helps with privacy and reduces background activity.
