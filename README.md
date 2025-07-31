@@ -8,7 +8,7 @@ The goal: **more direct memory access, lower overhead, faster response times.**
 ## 📁 Cache & Kernel Tuning
 
 **Registry Base:**
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]`
+[`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management`]
 
 `"SecondLevelDataCache"=dword:00001C00`  
 Manually sets the L2 cache size to **1.8 MB** (1C00h = 7168 KB). Often ignored on modern CPUs, but useful on older or exotic systems (e.g. Snapdragon SoCs) where Windows may not detect it correctly.
