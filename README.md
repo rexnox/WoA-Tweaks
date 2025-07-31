@@ -16,8 +16,8 @@ To fix that, follow this guide to add native Vulkan support for Snapdragon 8cx:
 
 The Desktop Window Manager (DWM) can become a bottleneck on ARM devices. With a few smart Registry edits, you can improve system responsiveness and reduce unnecessary visual overhead.
 
-👉 [Check out the DWM performance tweaks here:](https://github.com/rexnox/WoA-Tweaks/blob/main/regedit/Registry%20Tweaks%20for%20Performance.md)
-🔧 DWM Tweaks for WoA
+👉 Check out the DWM performance tweaks here:
+🔧 [DWM Tweaks for WoA](https://github.com/rexnox/WoA-Tweaks/blob/main/regedit/Registry%20Tweaks%20for%20Performance.md)
 
 These tweaks are especially useful for low-power ARM devices, helping reduce system lag and visual stutter during multitasking or UI transitions.
 3. Extra Registry Tweaks for High Refresh Rate Displays
