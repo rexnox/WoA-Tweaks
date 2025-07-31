@@ -6,7 +6,7 @@ These settings are optimized for devices like the **Oneplus 7t Pro (Hotdog)** an
 They improve visual smoothness, reduce latency, and enhance DPI scaling.
 
 **Registry Base:**  
-`[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]`
+`HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM`
 
 ```
 "MaxQueuedBuffers"=dword:00000003
