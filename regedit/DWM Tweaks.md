@@ -2,7 +2,7 @@
 
 ## 🖼️ DWM Tweaks for High Refresh Rate Devices (e.g. Hotdog / Vayu)
 
-These settings are optimized for devices like the **ROneplus 7t Pro (Hotdog)** and **Xiaomi Poco X3 Pro (Vayu)** running at **90 Hz or higher**.  
+These settings are optimized for devices like the **Oneplus 7t Pro (Hotdog)** and **Xiaomi Poco X3 Pro (Vayu)** running at **90 Hz or higher**.  
 They improve visual smoothness, reduce latency, and enhance DPI scaling.
 
 **Registry Base:**  
