@@ -8,15 +8,15 @@ This guide shows you some practical optimizations to make your WoA setup noticea
 If you're using Windows 23H2 or earlier, you're likely missing the vulkan-1.dll file — which can cause apps like PPSSPP or other Vulkan-based emulators to fail.
 
 To fix that, follow this guide to add native Vulkan support for Snapdragon 8cx:
-👉 Enable Vulkan on Snapdragon 8cx
+👉 [Enable Vulkan on Snapdragon 8cx](https://driver1998.github.io/en/posts/vulkan-on-qualcomm-snapdragon-8cx/)
 
-    ⚠️ If you're already running Windows 24H2 (Build 26100) or newer, you can safely skip this step — Vulkan support is already built in.
+`⚠️ If you're already running Windows 24H2 (Build 26100) or newer, you can safely skip this step — Vulkan support is already built in.`
 
 2. DWM Registry Tweaks — Unlock Better Visual Performance
 
 The Desktop Window Manager (DWM) can become a bottleneck on ARM devices. With a few smart Registry edits, you can improve system responsiveness and reduce unnecessary visual overhead.
 
-👉 Check out the DWM performance tweaks here:
+👉 [Check out the DWM performance tweaks here:](https://github.com/rexnox/WoA-Tweaks/blob/main/regedit/Registry%20Tweaks%20for%20Performance.md)
 🔧 DWM Tweaks for WoA
 
 These tweaks are especially useful for low-power ARM devices, helping reduce system lag and visual stutter during multitasking or UI transitions.
@@ -24,7 +24,7 @@ These tweaks are especially useful for low-power ARM devices, helping reduce sys
 
 If your device supports 90Hz or 120Hz refresh rates, this set of registry tweaks helps you take full advantage of that smoother display experience.
 
-📈 Performance Tweaks for High Refresh Rate Devices
+📈 [Performance Tweaks for High Refresh Rate Devices](https://github.com/rexnox/WoA-Tweaks/blob/main/regedit/DWM%20Tweaks.md)
 
 They help ensure your system doesn't lock itself to 60Hz and make animations and scrolling feel a lot more fluid.
 4. bcdedit Optimizations — Boost CPU Responsiveness
@@ -32,9 +32,9 @@ They help ensure your system doesn't lock itself to 60Hz and make animations and
 Last but not least:
 Using bcdedit, you can modify system boot and CPU-related behavior. Personally, I noticed a performance improvement when enabling CPU time tracking — it might not work the same on every device, but it's worth trying.
 
-🧩 bcdedit Tweak Guide
+🧩 [bcdedit Tweak Guide](https://github.com/rexnox/WoA-Tweaks/blob/main/bcdedit/bcd.md)
 
-    🧠 Note: Results may vary depending on your specific device and use case — test and tweak to see what works best for you.
+`🧠 Note: Results may vary depending on your specific device and use case — test and tweak to see what works best for you.`
 
 Final Thoughts — Small Tweaks, Big Gains
 
@@ -47,4 +47,4 @@ Open an issue or send a pull request — contributions are always welcome!
 
 Happy tweaking 💻⚡
 
-🔗 Repo: WoA-Tweaks by rexnox
+🔗 Repo: [WoA-Tweaks by rexnox](https://github.com/rexnox/WoA-Tweaks)
